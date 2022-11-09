@@ -9,13 +9,11 @@ compiles a very detailed list of consumer prices and it is fascinating to see ho
 
 Below are a series of animated charts to show inflationary impact on various products and services since 2012:
 
-
-![foodprices](https://user-images.githubusercontent.com/109650950/200292135-f9c5f373-6162-4044-ab64-35338ba51560.gif)
-
+![foodprices](https://user-images.githubusercontent.com/109650950/200799334-c6db494e-dc53-42ac-8453-e6e62400187e.gif)
 
 
 
-![shelter](https://user-images.githubusercontent.com/109650950/200293117-ba020f07-62e1-4d7b-a4c2-527e605d3e54.gif)
+![shelter](https://user-images.githubusercontent.com/109650950/200799394-23734f3b-20fe-4d25-9949-3df92b3b0925.gif)
 
 
-![clothingOther](https://user-images.githubusercontent.com/109650950/200293348-7dbe48ec-023d-43d7-9409-b9a8b8c48740.gif)
+![clothingOther](https://user-images.githubusercontent.com/109650950/200799474-bc20487c-699e-4fdf-9dfa-194cff122d87.gif)
