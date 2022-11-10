@@ -82,45 +82,57 @@ other <- dt[variable %in% c("Garments for men", "Garments for women", "Garments 
                             "Veterinary and other services for pets", "Pets and related products")]
 
 
+
 # Plot for Food 
 p <- ggplot(data = food, aes(x = value, y = variable, color = variable)) + 
   geom_path() + 
-  geom_point() + theme_minimal()+theme(legend.position="none")+
+  geom_point(size=2.0) + theme_minimal()+theme(legend.position="none")+
   transition_reveal(along = quarter) + 
   ease_aes("linear") +
   scale_x_continuous(limits = c(min(food$value), max(food$value)), breaks = seq(round(min(food$value), -1), round(max(food$value),-1), by=10))+
   labs(caption="Source: Australian Bureau of Statistics (ABS) - Seasonally adjusted",
-       title="Australian Food Price Index: {(frame_along)}",
+       title="Australian Food Prices in the Last Decade (2012-2022): {(frame_along)}",
        subtitle="Price index for select food categories, 2011-12 = 100",
-       y="", x="")+
+       y="", x="")+ theme(axis.text.y = element_text(face="bold"))+geom_vline(xintercept=100, linetype=3)+
+  annotate("text", x = 98, 
+           y = c("Poultry"), label = "2011-2012 Prices", size=4, angle=270,
+           colour='red', face="bold")+ 
   theme(plot.title=element_text(face="bold"),
         plot.caption=element_text(hjust=0))+view_follow(fixed_x = TRUE,fixed_y = TRUE)
 
 # Plot for Shelter
 q <- ggplot(data = shelter, aes(x = value, y = variable, color = variable)) + 
   geom_path() + 
-  geom_point() + theme_minimal()+theme(legend.position="none")+
+  geom_point(size=2.0) + theme_minimal()+theme(legend.position="none")+
   transition_reveal(along = quarter) + 
   ease_aes("linear") +
   scale_x_continuous(limits = c(min(shelter$value), max(shelter$value)), breaks = seq(round(min(shelter$value), -1), round(max(shelter$value),-1), by=10))+
   labs(caption="Source: Australian Bureau of Statistics (ABS) - Seasonally adjusted",
-       title="Australian Shelter Price Index: {(frame_along)}",
-       subtitle="Price index for select Shelter categories, 2011-12=100",
-       y="")+
+       title="Australian Consumer Prices in the Last Decade (2012-2022): {(frame_along)}",
+       subtitle="Price index for select categories, 2011-12=100",
+       y="", x="")+ 
+  theme(axis.text.y = element_text(face="bold"))+geom_vline(xintercept=100, linetype=3)+
+  annotate("text", x = 98, 
+           y = c("Health"), label = "2011-2012 Prices", size=4, angle=270,
+           colour='red', face="bold")+ 
   theme(plot.title=element_text(face="bold"),
         plot.caption=element_text(hjust=0))+view_follow(fixed_x = TRUE,fixed_y = TRUE)
 
 # Plot for other
 r <- ggplot(data = other, aes(x = value, y = variable, color = variable)) + 
   geom_path() + 
-  geom_point() + theme_minimal()+theme(legend.position="none")+
+  geom_point(size=2.0) + theme_minimal()+theme(legend.position="none")+
   transition_reveal(along = quarter) + 
   ease_aes("linear") +
   scale_x_continuous(limits = c(min(other$value), max(other$value)), breaks = seq(round(min(other$value), -1), round(max(other$value),-1), by=10))+ 
   labs(caption="Source: Australian Bureau of Statistics (ABS) - Seasonally adjusted",
-       title="Clothing+Other Price Index: {(frame_along)}",
-       subtitle="Price index for select Clothing+Other categories, 2011-12=100",
-       y="")+
+       title="Australian Consumer Prices in the Last Decade (2012-2022): {(frame_along)}",
+       subtitle="Price index for select categories, 2011-12=100",
+       y="", x="")+
+  theme(axis.text.y = element_text(face="bold"))+geom_vline(xintercept=100, linetype=3)+
+  annotate("text", x = 102, 
+           y = c("Games, toys and hobbies"), label = "2011-2012 Prices", size=4, angle=270,
+           colour='red', face="bold")+
   theme(plot.title=element_text(face="bold"),
         plot.caption=element_text(hjust=0))+view_follow(fixed_x = TRUE,fixed_y = TRUE)
 
